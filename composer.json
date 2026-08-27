@@ -1,0 +1,58 @@
+{
+    "name": "imazed/laravel-helpscout-beacon",
+    "description": "Embed the Help Scout Beacon in a Laravel application, with Secure Mode signatures generated server-side.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "helpscout",
+        "help-scout",
+        "laravel",
+        "beacon",
+        "customer-support"
+    ],
+    "authors": [
+        {
+            "name": "Ines van Dijk"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/auth": "^12.0 || ^13.0",
+        "illuminate/contracts": "^12.0 || ^13.0",
+        "illuminate/cookie": "^12.0 || ^13.0",
+        "illuminate/http": "^12.0 || ^13.0",
+        "illuminate/support": "^12.0 || ^13.0",
+        "illuminate/view": "^12.0 || ^13.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.24",
+        "orchestra/testbench": "^10.0 || ^11.0",
+        "phpunit/phpunit": "^11.5 || ^12.5 || ^13.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Imazed\\HelpScoutBeacon\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Imazed\\HelpScoutBeacon\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Imazed\\HelpScoutBeacon\\HelpScoutBeaconServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
